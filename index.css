@@ -1,0 +1,60 @@
+.square{
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+    /*background-color: purple;*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 8%;
+    margin-right: 3%;
+}
+.body{
+    background-color: black;
+}
+.main{
+   
+    padding-left: 180px;
+    padding-bottom: 0px;
+    margin-top: 10px;
+    
+}
+.heading{
+    color: black;
+    padding-top: 40px;
+    font-size: 20px;
+}
+.headingbackground{
+    background-color: pink;
+    height: 150px;
+    text-align: center;
+}
+.buttondiv{
+
+    height: 30px;
+    background-color: white;
+    text-align: center;
+}
+.button1{
+    height: 30px;
+    margin-right: 200px;
+    position: relative;
+    border: 0px solid transparent;
+}
+.button2{
+    border: 0px solid transparent;
+    margin-right: 2px;
+    margin-left: 180px;
+    position: relative;
+    height: 30px;
+}
+.button3{
+    border: 0px solid transparent;
+    margin-left: 2px;
+    position: relative;
+    height: 30px;
+    background-color: blue;
+}
+.message{
+    text-align: center;
+    position: relative;
+}
