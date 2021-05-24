@@ -31,46 +31,47 @@ var colors = randomcolors(6);
  }); 
  for(i = 0; i < box.length;i++){
      //clicking of  all boxes
-    box[i].addEventListener("click", function(){
+    box[i].addEventListener("click",function(){
         var pickedcolor = this.style.backgroundColor;
+        var correctone = right();
         if(pickedcolor === correctone){
             //converting all boxes and background of samecolor
-            for(i=0 ;i<box.length ;i++){
+            for(var i=0 ;i<box.length ;i++){
                 box[i].style.backgroundColor = correctone;
             }
+            
             bg.style.backgroundColor = correctone;
             messagedisplay.textContent = "CORRECT!";
             bb1.textContent = "PLAY AGAIN?";
             bb1.addEventListener("click",function(){
                 bb1.textContent = "NEW COLORS";
                 messagedisplay.textContent = "";
-            })
+            });
             bb1.style.backgroundColor = "white";
         }
         else{
-            this.style.backgroundColor = 'black'
+            this.style.backgroundColor = 'black';
             messagedisplay.textContent = "TRYAGAIN!";
             bb1.style.backgroundColor = "white";
         }
     });
  }
- //correct color no.
-function right(){
-    var choose = Math.floor(Math.random() * box.length);
-    return colors[choose];
-}
+
  //giving color to the boxes
- for(i = 0; i<box.length; i++){
-     box[i].style.backgroundColor = colors[i];
- }
+//  for(i = 0; i<box.length; i++){
+//      box[i].style.backgroundColor = colors[i];
+//  }
+
+
  //assigning of random color 
+
+
  //making of randomcolor
  function generaterandomcolor()
  {
     var r = Math.floor(Math.random() * 256);
     var g = Math.floor(Math.random() * 256);
     var b = Math.floor(Math.random() * 256);
-
     return "rgb(" + r + ", " + g + ", " + b + ")";
  }
  //making of 6 or 3 random color
@@ -78,9 +79,16 @@ function right(){
     var colored = [];
     for(i = 0; i<num; i++){
         colored[i] = generaterandomcolor();
-    };
+    }
     return colored;
  }
+  //correct color no.
+function right(){
+    var choose = Math.floor(Math.random() * box.length);
+    return colors[choose];
+}
+
+
  //making of easy button
  var bb2 = document.querySelector("#bb2");
  bb2.addEventListener("click",function(){
