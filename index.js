@@ -62,7 +62,7 @@ function right(){
  //giving color to the boxes
  for(i = 0; i<box.length; i++){
      box[i].style.backgroundColor = colors[i];
- };
+ }
  //assigning of random color 
  //making of randomcolor
  function generaterandomcolor()
@@ -72,7 +72,7 @@ function right(){
     var b = Math.floor(Math.random() * 256);
 
     return "rgb(" + r + ", " + g + ", " + b + ")";
- };
+ }
  //making of 6 or 3 random color
  function randomcolors(num){
     var colored = [];
@@ -80,7 +80,7 @@ function right(){
         colored[i] = generaterandomcolor();
     };
     return colored;
- };
+ }
  //making of easy button
  var bb2 = document.querySelector("#bb2");
  bb2.addEventListener("click",function(){
