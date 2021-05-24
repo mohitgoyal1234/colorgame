@@ -5,10 +5,10 @@ var colors = randomcolors(6);
  var box = document.querySelectorAll("#box");
  var bg = document.getElementById("bg");
  
- var correctone;
+
  //display color no.
  var nameofcolor = document.getElementById("nameofcolor");
- nameofcolor.textContent = right();
+ 
  //messagedisplay
  var messagedisplay = document.getElementById("messagedisplay");
  var bb1 = document.querySelector("#bb1");
@@ -16,8 +16,9 @@ var colors = randomcolors(6);
      //getting of new colors
      colors = randomcolors(6);
      //new correct color
+     nameofcolor.textContent = right();
      //correct color
-     correctone = nameofcolor.textContent;
+     correctone =  nameofcolor.textContent;
      //assigning color of boxes
      for(i=0;i<box.length;i++){
          box[i].style.backgroundColor = colors[i];
@@ -32,7 +33,7 @@ var colors = randomcolors(6);
      //clicking of  all boxes
     box[i].addEventListener("click",function(){
         var pickedcolor = this.style.backgroundColor;
-        var correctone = nameofcolor.textContent;
+        var correctone =  nameofcolor.textContent; 
         if(pickedcolor === correctone){
             //converting all boxes and background of samecolor
             for(var i=0 ;i<box.length ;i++){
@@ -100,7 +101,7 @@ function right(){
     //new correct color
     nameofcolor.textContent = right1();
     //correct color
-    correctone = nameofcolor.textContent;
+    correctone =  nameofcolor.textContent;
     //assigning color of boxes
     
     bb2.style.backgroundColor = "blue";
@@ -120,9 +121,9 @@ function right(){
         //getting of new colors
         colors = randomcolors(6);
         //new correct color
-        nameofcolor.textContent = right();
+       
         //correct color
-        correctone = nameofcolor.textContent;
+        correctone =  nameofcolor.textContent;
         //assigning color of boxes
         for(i=0;i<box.length;i++){
             box[i].style.backgroundColor = colors[i];
